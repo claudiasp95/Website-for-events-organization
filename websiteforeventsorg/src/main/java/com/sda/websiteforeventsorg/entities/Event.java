@@ -26,10 +26,8 @@ public class Event {
     private User user;
 
     @OneToOne(mappedBy = "event")
-    Participation participation;
+    private Participation participation;
 
     @OneToMany(mappedBy = "event")
-    List<Comment> commentList;
-
-
+    private List<Comment> commentList;
 }

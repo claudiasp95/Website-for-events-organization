@@ -26,12 +26,12 @@ public class User {
     private LocalDateTime dateOfBirth;
 
     @OneToOne(mappedBy = "user")
-    Event event;
+    private Event event;
 
     @OneToMany(mappedBy = "user")
-    List<Participation> participationList;
+    private List<Participation> participationList;
 
     @OneToMany(mappedBy = "user")
     @ToString.Exclude
-    List<Comment> commentList;
+    private List<Comment> commentList;
 }
